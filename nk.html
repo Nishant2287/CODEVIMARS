@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Vimarsh | Innovate</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* 1. GLOBAL SETTINGS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Ensures padding doesn't break layout */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a; /* Very Dark Blue Background */
+            color: #e2e8f0; /* Soft White Text */
+            overflow-x: hidden; /* Prevents side scrolling */
+        }
+
+        /* 2. NAVIGATION BAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            position: fixed; /* Sticks to top */
+            width: 100%;
+            top: 0;
+            background: rgba(15, 23, 42, 0.9); /* Semi-transparent */
+            backdrop-filter: blur(10px); /* Blur effect */
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Makes text gradient */
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8; /* Light Blue Glow */
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+        }
+
+        /* 3. HERO SECTION (Main Header) */
+        section {
+            padding: 100px 8%;
+            min-height: 100vh; /* Full screen height */
+        }
+
+        #home {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8; /* Greyer text */
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            color: #0f172a;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05); /* Slight zoom */
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+        }
+
+        /* 4. EVENTS & TEAM (Grid Layout) */
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #38bdf8;
+            display: inline-block;
+            padding-bottom: 10px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Grid */
+            gap: 30px;
+        }
+
+        /* The "Glass" Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.05); /* See-through white */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            transition: 0.4s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        .avatar {
+            font-size: 60px;
+            margin-bottom: 15px;
+            background: rgba(255,255,255,0.1);
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%; /* Circle */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 5. FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            color: #64748b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Code Vimarsh</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#team">Team</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="hero">
+            <h1>Think. Code.<br><span>Innovate.</span></h1>
+            <p>Code Vimarsh is the ultimate student community for tech enthusiasts. We turn coffee into code and ideas into reality.</p>
+            <a href="#events" class="btn">Explore Events</a>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <div class="container">
+            <div class="card">
+                <h3>Hackathon 2025</h3>
+                <p style="color:#cbd5e1; margin-bottom:10px;">📅 Jan 20, 2025</p>
+                <p>A 24-hour intense coding marathon. Bring your laptop and your brain.</p>
+            </div>
+            <div class="card">
+                <h3>Web Wizardry</h3>
+                <p style="color:#cbd5e1; margin-bottom:10px;">📅 Feb 10, 2025</p>
+                <p>Master the art of HTML, CSS, and Modern JavaScript frameworks.</p>
+            </div>
+            <div class="card">
+                <h3>AI Revolution</h3>
+                <p style="color:#cbd5e1; margin-bottom:10px;">📅 March 5, 2025</p>
+                <p>Deep dive into Machine Learning and the future of tech.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2>Our Leaders</h2>
+        <div class="container">
+            <div class="card">
+                <div class="avatar">👨‍💻</div>
+                <h3>Rohan Sharma</h3>
+                <p>President</p>
+            </div>
+            <div class="card">
+                <div class="avatar">👩‍💻</div>
+                <h3>Priya Patel</h3>
+                <p>Tech Lead</p>
+            </div>
+            <div class="card">
+                <div class="avatar">🚀</div>
+                <h3>Amit Singh</h3>
+                <p>Event Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Designed with ❤️ by Code Vimarsh | &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
